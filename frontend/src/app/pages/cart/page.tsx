@@ -1,5 +1,5 @@
-import { FoodCart } from "@/src/components/chart/FoodChart";
-import { Navication } from "@/src/components/layout/Navbar";
+import { FoodCart } from "@/components/cart/FoodChart";
+import { Navication } from "@/components/layout/Navbar";
 const detailPage = () => {
   return (
     <div className="m-0">

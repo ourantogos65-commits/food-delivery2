@@ -1,4 +1,4 @@
-import { FoodType } from "@/src/lib/types";
+import { FoodType } from "@/lib/types";
 import Link from "next/link";
 import { FoodCardDetail } from "./FoodDetail";
 
