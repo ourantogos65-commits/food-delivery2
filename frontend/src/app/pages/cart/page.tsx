@@ -1,0 +1,13 @@
+import { FoodCart } from "@/src/components/chart/FoodChart";
+import { Navication } from "@/src/components/layout/Navbar";
+const detailPage = () => {
+  return (
+    <div className="m-0">
+      <Navication />
+      <div className="flex w-[full] h-screen flex-col gap-5 items-center justify-center  bg-gray-600 ">
+        <FoodCart />
+      </div>
+    </div>
+  );
+};
+export default detailPage;
