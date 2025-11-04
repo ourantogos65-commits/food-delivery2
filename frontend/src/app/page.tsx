@@ -14,7 +14,7 @@ const LoginPage = () => {
         <Input type="password" placeholder="Enter your email address" />
         <Input type="password" placeholder="Password" />
         <Link
-          href="/pages/home"
+          href="/pages/homepage"
           className="bg-gray-200 mt-3 py-2 rounded-2xl text-center"
         >
           Let's Go
