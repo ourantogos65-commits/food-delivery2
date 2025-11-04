@@ -12,7 +12,7 @@ export const Navication = () => {
           <p>swift delivery</p>
         </div>
       </div>
-      <Link href="/pages/adminPage">
+      <Link href="/adminpages/adminpage">
         <img src="./admin2.jpg " className="rounded-full w-10 h-10" alt="" />
       </Link>
     </div>
