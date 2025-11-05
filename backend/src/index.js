@@ -4,7 +4,8 @@ import bodyParser from "body-parser";
 import { configDotenv } from "dotenv";
 import { connectDB } from "../db.js";
 import cors from "cors";
-import { Routers } from "./routers/router.js";
+
+import { foodRouters } from "./routers/foodRouter.js";
 
 configDotenv();
 
@@ -18,8 +19,8 @@ app.use(
     origin: "http://localhost:3000",
   })
 );
-app.use("/", Routers);
-
+// app.use("/", Routers);
+app.use("/food", foodRouters)
 app.listen(PORT, () => {
   connectDB();
   console.log(chalk.green(` Server is running at http://localhost:${PORT}`));

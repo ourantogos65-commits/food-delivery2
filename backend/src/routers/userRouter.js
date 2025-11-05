@@ -5,8 +5,9 @@ import {  signUp } from "../controlled/user.js";
 export const Routers = Router();
 
 Routers
+  
   .post("/signup", signUp)
-
+  
 
 
 //   .post("/create-user", CreateUser)
