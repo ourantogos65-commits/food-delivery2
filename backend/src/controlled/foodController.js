@@ -1,12 +1,8 @@
 import { Food } from "../models/Foodmodel.js";
 
 export const getFood = async (req, res) => {
-  try {
-    const result = await Food.find();
-    res.status(200).send(result);
-  } catch (error) {
-    res.status(500).send({ message: error });
-  }
+  const result = await Food.find().populate("category");
+  res.status(200).send(result);
 };
 export const createfood = async (req, res) => {
   const { body } = req;

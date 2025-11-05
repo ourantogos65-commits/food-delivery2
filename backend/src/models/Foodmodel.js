@@ -1,13 +1,13 @@
-import { model, Schema } from "mongoose";
+import { model, Schema, SchemaType } from "mongoose";
 
 const FoodSchemas = new Schema(
   {
-  foodName:{type:String},
-  price:{type:Number},
-  image:{type:String},
-  ingredients:{type:String},
-  createdAt:{type:Date},
-  updatedAt:{type:Date}
+    foodName: { type: String },
+    price: { type: Number },
+    image: { type: String },
+    ingredients: { type: String },
+    category: { type: Schema.Types.ObjectId, ref: "FoodCategory" },
+ 
   },
   { timestamps: true }
 );
