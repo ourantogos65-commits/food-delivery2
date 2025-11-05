@@ -6,6 +6,7 @@ import { connectDB } from "../db.js";
 import cors from "cors";
 
 import { foodRouters } from "./routers/foodRouter.js";
+import { foodCategoryRouters } from "./routers/foodcategoryRouter.js";
 
 configDotenv();
 
@@ -20,7 +21,8 @@ app.use(
   })
 );
 // app.use("/", Routers);
-app.use("/food", foodRouters)
+// app.use("/food", foodRouters)
+app.use("/foodcategory",foodCategoryRouters)
 app.listen(PORT, () => {
   connectDB();
   console.log(chalk.green(` Server is running at http://localhost:${PORT}`));
