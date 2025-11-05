@@ -11,8 +11,7 @@ const userSchemas = new Schema(
     role: { type: String, enum: ["USER", "ADMIN"] },
     orderedFoods: { type: [Schema.ObjectId] },
     isVerified: { type: Boolean },
-    createdAt: { type: Date },
-    updatedAp: { type: Date },
+ 
   },
   { timestamps: true }
 );

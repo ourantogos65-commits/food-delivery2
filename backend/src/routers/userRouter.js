@@ -1,12 +1,12 @@
 import { Router } from "express";
-import {  signUp } from "../controlled/user.js";
+import {  getUser } from "../controlled/user.js";
 
 
-export const Routers = Router();
+export const userRouters = Router();
 
-Routers
+userRouters
   
-  .post("/signup", signUp)
+  .get("/user", getUser)
   
 
 

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createfoodCategory, deleteFoodCategory, getFoodCategory, updateFoodCategory } from "../controlled/foodCategoryController";
+import { createfoodCategory, deleteFoodCategory, getFoodCategory, updateFoodCategory } from "../controlled/foodCategoryController.js";
 
 
 
