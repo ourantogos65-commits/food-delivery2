@@ -15,19 +15,19 @@ export const FoodCardDetail = () => {
     <div className="relative">
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <Button
+          <button
             className="rounded-full w-11 h-11 text-4xl items-center mt-38 ml-76 absolute "
-            variant="outline"
+           
           >
             +
-          </Button>
+          </button>
         </AlertDialogTrigger>
         <AlertDialogContent className="w-[800px]  max-w-full">
           <AlertDialogHeader>
             <AlertDialogDescription>
               <div className="flex gap-6  justify-center ">
                 <img
-                  src="./fooddetail.png"
+                  src="/food.png"
                   alt="Food Detail"
                   className="w-[377px] h-[364px]  object-cover rounded-lg"
                 />
@@ -44,7 +44,7 @@ export const FoodCardDetail = () => {
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
+           
             <AlertDialogAction>Continue</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

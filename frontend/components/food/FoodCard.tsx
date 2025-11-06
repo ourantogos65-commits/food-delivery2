@@ -6,10 +6,12 @@ type Props = {
   food: FoodType;
 };
 export const FoodCard = ({ food }: Props) => {
+
+  
   return (
     <Link
       href={"/pages/cart"}
-      className="w-[397.33px] h-[342px] bg-white  rounded-lg  justify-center items-center flex flex-col gap-3 "
+      className="w-[397.33px] h-[342px] bg-white  rounded-lg  justify-center items-center flex flex-col gap-3 border"
     >
       <div className="w-[365.33px] border rounded-2xl h-[210px]">
         <FoodCardDetail />
