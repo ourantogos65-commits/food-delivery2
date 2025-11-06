@@ -1,6 +1,7 @@
 import { FoodCard } from "./FoodCard";
 
 export const FoodCardList = () => {
+  
   const foods = [
     { title: "gydf" },
     { title: "gdk" },
@@ -11,9 +12,9 @@ export const FoodCardList = () => {
   ];
 
   return (
-    <div className="flex w-[1264px] flex-col gap-3  ">
+    <div className="flex p-10 flex-col gap-5  w-[1364px] ">
       <h1 className="text-4xl ">Appetizers</h1>
-      <div className="flex flex-wrap gap-5">
+      <div className=" grid grid-cols-3 gap-5 ">
         {foods.map((food, index) => (
           <FoodCard key={index} food={food} />
         ))}
