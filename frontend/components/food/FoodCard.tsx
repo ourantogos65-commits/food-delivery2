@@ -6,8 +6,6 @@ type Props = {
   food: FoodType;
 };
 export const FoodCard = ({ food }: Props) => {
-
-  
   return (
     <Link
       href={"/pages/cart"}
@@ -19,8 +17,7 @@ export const FoodCard = ({ food }: Props) => {
 
       <div className="w-[365.33px]  flex flex-col gap-2 ">
         <div className="flex justify-between text-3xl w-[365.33px] ">
-          <h1 className=" text-red-300">{food.title}</h1>
-          <p>fdbfdb</p>
+          <h1 className=" text-red-300">{food.foodName}</h1>
         </div>
         <p className="text-sm">sfvs</p>
       </div>
