@@ -1,4 +1,7 @@
 import Link from "next/link";
+import { AppSidebar } from "../cart/CartInfo";
+import { SidebarProvider, SidebarTrigger } from "../ui/sidebar";
+import { Sidebar } from "lucide-react";
 
 export const Navication = () => {
   return (
@@ -12,6 +15,7 @@ export const Navication = () => {
           <p className="text-sm text-accent">swift delivery</p>
         </div>
       </div>
+      
       <Link href="/adminpages/adminpage">
         <img src="/admin.jpg " className="rounded-full w-10 h-10" alt="" />
       </Link>

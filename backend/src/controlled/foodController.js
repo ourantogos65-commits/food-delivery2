@@ -1,7 +1,10 @@
 import { Food } from "../models/Foodmodel.js";
 
 export const getFood = async (req, res) => {
+  const { categoryId } = req.query;
+
   const result = await Food.find().populate("category");
+
   res.status(200).send(result);
 };
 export const createfood = async (req, res) => {
