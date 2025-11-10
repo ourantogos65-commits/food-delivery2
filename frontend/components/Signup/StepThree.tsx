@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { Input } from "../ui/input";
 
-export const StepThree = () => {
+export const StepThree = ({ currentIndex }: { currentIndex: any }) => {
   return (
     <div>
       {" "}
@@ -12,9 +11,8 @@ export const StepThree = () => {
             Create a strong password with letters, numbers.
           </p>
         </div>
-        <Input type="password" placeholder="Password" />
-        <Input type="password" placeholder="Confirm" />
-        <Link href="/pages/homepage">Go to homepage🏡</Link>
+       
+        <div className="pb-5"></div>
       </div>
     </div>
   );

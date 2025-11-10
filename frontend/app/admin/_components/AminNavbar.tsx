@@ -4,7 +4,7 @@ type Props={
 }
 
 
-export const AdminNavbar = ({alldishes,orders}:Props) => {
+export const AdminNavbar = ({ alldishes,orders}:Props) => {
   return (
     <div className="w-[205px] p-5 bg-white h-screen flex flex-col gap-10">
       <div className="flex gap-3 pt-4">

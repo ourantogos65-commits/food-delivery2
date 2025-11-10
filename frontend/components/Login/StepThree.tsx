@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Input } from "../ui/input";
 
 export const LoginStepThree = () => {
   return (
@@ -12,7 +11,7 @@ export const LoginStepThree = () => {
             Sign up to explore your favorite dishes.
           </p>
         </div>
-        <Input type="password" placeholder="Enter your email address" />
+
         <Link href="/pages/homepage">Go to homepage🏡</Link>
       </div>
     </div>

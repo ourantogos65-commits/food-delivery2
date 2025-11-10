@@ -1,16 +1,15 @@
 type Props = {
-  setCurrentIndex: any;
   currentIndex: any;
 };
-export const NextButton = ({ setCurrentIndex, currentIndex }: Props) => {
+export const NextButton = ({ currentIndex }: Props) => {
   return (
     <div className="pb-5">
       {currentIndex < 2 && (
         <button
-          onClick={() => setCurrentIndex(currentIndex + 1)}
+          type="submit"
           className="border rounded-md bg-black text-white w-full py-1"
         >
-          contiune
+          Let's Go
         </button>
       )}
     </div>
