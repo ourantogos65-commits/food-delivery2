@@ -1,7 +1,6 @@
 "use client";
 
-import { Button } from "../ui/button";
-import { DishesCategory } from "./DishesCategory";
+import { Button } from "../../../components/ui/button";
 
 export const AdminOrder = () => {
   const dishes = [
@@ -18,19 +17,19 @@ export const AdminOrder = () => {
         <div className="flex justify-between">
           <h2 className="text-2xl font-semibold mb-4 ">
             Orders{" "}
-            <blockquote className="text-sm text-gray-400">32items</blockquote>
+            <blockquote className="text-lg text-gray-400">32items</blockquote>
           </h2>
           <div className="flex gap-2">
-            <Button className="border">13 June 2023 - 14 July 2023</Button>
-            <Button>Change delivery state</Button>
+            <Button className="border rounded-4xl ">13 June 2023 - 14 July 2023</Button>
+            <Button className="rounded-4xl border">Change delivery state</Button>
           </div>
         </div>
 
-        <div className="flex flex-col gap-5  ">
+        <div className="flex flex-col">
           {dishes.map((dish) => (
             <div
               key={dish.id}
-              className=" bg-white border rounded-xl w-full h-[52px]  "
+              className=" bg-white border  w-full h-[52px]  "
             >
               <h3 className="font-semibold">{dish.name}</h3>
               <p>${dish.price}</p>

@@ -1,13 +1,11 @@
 "use client";
 
-import { AdminOrder } from "@/components/admin/AdminOrder";
-import { AllDishes } from "@/components/admin/AllDishes";
-import { AdminNavbar } from "@/components/admin/AminNavbar";
-import { DishesCategory } from "@/components/admin/DishesCategory";
-import Link from "next/link";
+import { AllDishes } from "@/app/admin/_components/AllDishes";
+import { AdminNavbar } from "@/app/admin/_components/AminNavbar";
+import { AdminOrder } from "./_components/FoodOrder";
 import { useState } from "react";
 
-const AdminPage = () => {
+const AdminLayout = () => {
   const childrens = {
     orders: <AdminOrder />,
     allDishes: <AllDishes />,
@@ -20,7 +18,7 @@ const AdminPage = () => {
       <div className="flex w-full  h-screen gap-5  ">
         <AdminNavbar
           alldishes={() => setChild(childrens.allDishes)}
-           orders={() => setChild(childrens.orders)}
+          orders={() => setChild(childrens.orders)}
         />
         <div className="flex flex-col  w-full h-screen  m-3">
           <div className="  px-5 p-3">
@@ -35,4 +33,4 @@ const AdminPage = () => {
     </div>
   );
 };
-export default AdminPage;
+export default AdminLayout;

@@ -1,5 +1,3 @@
-import { Input } from "../ui/input";
-
 export const LoginStepTwo = () => {
   return (
     <div>
@@ -10,7 +8,6 @@ export const LoginStepTwo = () => {
             Sign up to explore your favorite dishes.
           </p>
         </div>
-        <Input type="password" placeholder="Enter your email address" />
       </div>
     </div>
   );

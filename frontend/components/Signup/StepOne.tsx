@@ -1,6 +1,11 @@
-import { Input } from "../ui/input";
+import { HandleOnInput } from "../ui/HandleOnInput";
 
-export const StepOne = () => {
+
+type Props = {
+  errors: any;
+  setErrors: any;
+};
+export const StepOne = ({ errors, setErrors }: Props) => {
   return (
     <div className=" flex flex-col gap-6  ">
       <div>
@@ -9,7 +14,19 @@ export const StepOne = () => {
           Sign up to explore your favorite dishes.
         </p>
       </div>
-      <Input type="password" placeholder="Enter your email address" />
+      {/* <Input
+        id="email"
+        type="password"
+        placeholder="Enter your email address"
+      /> */}
+      <HandleOnInput
+        id="email"
+        name="email"
+        type="email"
+        placeholder="Enter your email address"
+        errors={errors}
+        setErrors={setErrors}
+      />
     </div>
   );
 };
