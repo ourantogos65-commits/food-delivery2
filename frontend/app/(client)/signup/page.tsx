@@ -7,7 +7,6 @@ import { BackButton } from "@/components/ui/backButton";
 import { NextButton } from "@/components/ui/nextButton";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import useSWR from "swr";
 
 const SignUpPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,7 +18,6 @@ const SignUpPage = () => {
     const errors = {};
 
     const email = data.get("email");
-
     const pass = data.get("pass");
     const Confirmpass = data.get("Confirmpass");
 
@@ -27,6 +25,7 @@ const SignUpPage = () => {
       if (!email)
         errors.email = "Invalid email. Use a format like example@email.com";
     }
+    
     if (currentIndex === 1) {
       if (!Confirmpass || Confirmpass !== pass)
         errors.Confirmpass = "Those password did’t match, Try again";

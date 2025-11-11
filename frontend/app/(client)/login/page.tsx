@@ -7,6 +7,7 @@ import { BackButton } from "@/components/ui/backButton";
 import { NextButton } from "@/components/ui/nextButton";
 import Link from "next/link";
 import { useState } from "react";
+
 export default function LoginPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [errors, setErrors] = useState<{ email?: string; pass?: string }>({});
@@ -62,7 +63,7 @@ export default function LoginPage() {
 
         <p className="text-center text-gray-400">
           Don’t have an account?{" "}
-          <Link href="/signup" className="text-blue-400">
+          <Link href="/" className="text-blue-400">
             Sign up
           </Link>
         </p>

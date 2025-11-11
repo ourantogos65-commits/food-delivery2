@@ -16,8 +16,8 @@
 // const HomePage = () => {
 //   return (
 //     <div className="flex w-[full] h-screen  gap-10 items-center justify-center  ">
-//       <Link href="/pages/signup">signup</Link>
-//       <Link href="/pages/login">Login</Link>
+//       <Link href="/signup">signup</Link>
+//       <Link href="/login">Login</Link>
 //     </div>
 //   );
 // };

@@ -4,7 +4,7 @@ import {
   deleteFoodOrder,
   getFoodOrder,
   updateFoodOrder,
-} from "../controlled/foodOrder.js";
+} from "../controlled/Order.js";
 
 export const foodOrderRouters = Router();
 
