@@ -1,11 +1,6 @@
 import Link from "next/link";
-import { AppSidebar } from "../cart/CartInfo";
-import { SidebarProvider, SidebarTrigger } from "../ui/sidebar";
-import { Sidebar } from "lucide-react";
-import { OrderDetail } from "../food/OrderDetail";
 
-
-export const Navication = () => {
+export const Navbar = () => {
   return (
     <div className="px-[88px] py-[3px] flex  justify-between w-full bg-black">
       <div className="flex w-[146px] items-center gap-3 ">
@@ -18,12 +13,10 @@ export const Navication = () => {
         </div>
       </div>
       <div className="flex gap-4 ">
-         <OrderDetail/>
-      <Link href="/admin">
-        <img src="/admin.jpg " className="rounded-full w-10 h-10" alt="" />
-      </Link>
+        <Link href="/admin">
+          <img src="/admin.jpg " className="rounded-full w-10 h-10" alt="" />
+        </Link>
       </div>
-   
     </div>
   );
 };

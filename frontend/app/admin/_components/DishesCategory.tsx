@@ -1,6 +1,7 @@
 import { AddDish } from "./AddDish";
 
 
+
 export const DishesCategory = () => {
   const dishes = [{ title: "gdshvj" }, { title: "ghk" }, { title: "ghk" }];
   return (
@@ -20,7 +21,7 @@ export const DishesCategory = () => {
             </div>
           );
         })}
-         <AddDish />
+       
       </div>
      
     </div>

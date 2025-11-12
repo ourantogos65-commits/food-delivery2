@@ -12,7 +12,7 @@ export const LoginStepThree = () => {
           </p>
         </div>
 
-        <Link href="/pages/homepage">Go to homepage🏡</Link>
+        <Link href="/homePage">Go to homepage🏡</Link>
       </div>
     </div>
   );

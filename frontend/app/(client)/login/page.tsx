@@ -7,6 +7,7 @@ import { BackButton } from "@/components/ui/backButton";
 import { NextButton } from "@/components/ui/nextButton";
 import Link from "next/link";
 import { useState } from "react";
+
 export default function LoginPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [errors, setErrors] = useState<{ email?: string; pass?: string }>({});
