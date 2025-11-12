@@ -4,13 +4,13 @@ import { DishesCategory } from "./DishesCategory";
 type Props = {
   dish: any;
   handleRemoveProd: any;
-  prodAddHandler: any;
+ 
 };
 
 export const DishesCard = ({
   dish,
   handleRemoveProd,
-  prodAddHandler,
+
 }: Props) => {
   return (
   

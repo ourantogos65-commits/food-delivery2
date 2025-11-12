@@ -14,11 +14,6 @@ import { useState } from "react";
 const onClickButton = () => {
   alert("Food is being added to the cart!");
 };
-const data = [
-  { id: 1, name: "iPhone 17", price: 18999 },
-  { id: 2, name: "Macbook", price: 1234 },
-  { id: 3, name: "Car", price: 111111 },
-];
 
 export const AddDish = ({ prodAddHandler }: { prodAddHandler: any }) => {
   const [name, setName] = useState("");
@@ -35,7 +30,10 @@ export const AddDish = ({ prodAddHandler }: { prodAddHandler: any }) => {
     <div className="relative ">
       <AlertDialog>
         <AlertDialogTrigger asChild className=" flex  ">
-          <button className="rounded-full w-11 h-11 text-4xl   ">+</button>
+          <button className="rounded-full w-10 h-10 text-4xl  font-extralight text-background justify-center items-center  bg-[#EF4444] ">
+            +
+          </button>
+          
         </AlertDialogTrigger>
         <AlertDialogContent className="w-[460px] h-[592px]">
           <AlertDialogHeader>

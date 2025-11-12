@@ -18,7 +18,21 @@ export const getCategory = async (req, res) => {
     res.status(500).send({ message: error });
   }
 };
-
+export const getCategoryById = async (req, res) => {
+  const {id}=req.params
+  const result = await Food.findById(id);
+  console.log(result);
+  res.status(200).send(result);
+};
+export const createfood = async (req, res) => {
+  const { body } = req;
+  try {
+    const result = await Food.create(body);
+    res.status(200).send(result);
+  } catch (error) {
+    res.status(500).send({ message: error });
+  }
+};
 export const CreateCategory = async (req, res) => {
   const { body } = req;
   try {

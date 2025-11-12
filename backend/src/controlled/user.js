@@ -2,7 +2,7 @@ import { User } from "../models/Usermodel.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
-// Get all users
+
 export const getUser = async (req, res) => {
   try {
     const users = await User.find();
@@ -13,7 +13,7 @@ export const getUser = async (req, res) => {
   }
 };
 
-// Sign up new user
+
 export const signUp = async (req, res) => {
   const { email, password } = req.body;
   try {
@@ -41,7 +41,7 @@ export const signUp = async (req, res) => {
   }
 };
 
-// Log in existing user
+
 export const logIn = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -68,7 +68,7 @@ export const logIn = async (req, res) => {
   }
 };
 
-// Update user by ID
+
 export const updateUser = async (req, res) => {
   try {
     const { id } = req.params;
@@ -82,7 +82,7 @@ export const updateUser = async (req, res) => {
   }
 };
 
-// Get user by ID
+
 export const getUserById = async (req, res) => {
   try {
     const user = await User.findById(req.params.id);

@@ -5,7 +5,12 @@ export const getFood = async (req, res) => {
   console.log(result)
   res.status(200).send(result);
 };
-
+export const getFoodById = async (req, res) => {
+  const {id}=req.params
+  const result = await Food.findById(id);
+  console.log(result);
+  res.status(200).send(result);
+};
 export const createfood = async (req, res) => {
   const { body } = req;
   try {

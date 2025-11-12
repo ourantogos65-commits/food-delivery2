@@ -6,14 +6,10 @@ import { AddDish } from "../_components/AddDish";
 import { DishesCard } from "../_components/DishesCard";
 import { DishesCategory } from "../_components/DishesCategory";
 
-const data = [
-  { id: 1, name: "iPhone 17", price: 18999 },
-  { id: 2, name: "Macbook", price: 1234 },
-  { id: 3, name: "Car", price: 111111 },
-];
+
 
 const Alldishes = () => {
-  const [products, setProducts] = useState(data);
+  const [products, setProducts] = useState([]);
 
   const handleRemoveProd = (id) => {
     setProducts(products.filter((product) => product.id !== id));
@@ -36,15 +32,18 @@ const Alldishes = () => {
 
         <div className="flex bg-white rounded-2xl p-2 justify-center gap-4">
           <div className="flex flex-wrap gap-8 justify-center w-full">
-            <div className="w-[270.75px] h-[241px] items-center flex justify-center border border-accent-foreground rounded-2xl">
+            <div className="w-[270.75px] h-[241px] items-center flex-col gap-5  flex justify-center border  border-red-500 border-dashed   rounded-2xl">
               <AddDish prodAddHandler={prodAddHandler} />
+              <div className="w-[154px]  text-center"> 
+                
+                Add new Dish to Salads</div>
             </div>
             {products.map((dish) => (
               <DishesCard
                 key={dish.id}
                 dish={dish}
                 handleRemoveProd={handleRemoveProd}
-                prodAddHandler={prodAddHandler}
+               
               />
             ))}
           </div>
