@@ -126,14 +126,14 @@ const onClickButton = () => {
   alert("Food is being added to the cart!");
 };
 export const AddCart = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   return (
     <div className="relative">
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <button className="rounded-full w-11 h-11 text-4xl items-center mt-38 ml-76 absolute ">
+          <Button className="rounded-full w-11 h-11 text-4xl items-center mt-38 ml-76 absolute ">
             +
-          </button>
+          </Button>
         </AlertDialogTrigger>
         <AlertDialogContent className="w-[800px] h-[412px]">
           <AlertDialogHeader>

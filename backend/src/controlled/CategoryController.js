@@ -20,14 +20,14 @@ export const getCategory = async (req, res) => {
 };
 export const getCategoryById = async (req, res) => {
   const {id}=req.params
-  const result = await Food.findById(id);
+  const result = await Category.findById(id).populate("foods");
   console.log(result);
   res.status(200).send(result);
 };
 export const createfood = async (req, res) => {
   const { body } = req;
   try {
-    const result = await Food.create(body);
+    const result = await Category.create(body);
     res.status(200).send(result);
   } catch (error) {
     res.status(500).send({ message: error });
@@ -54,9 +54,9 @@ export const UpdateCategory = async (req, res) => {
   }
 };
 export const DeleteCategory = async (req, res) => {
-  const { id } = await req.params;
+  const { id } =  req.params;
   try {
-    const result = Category.findByIdAndDelete(id);
+    const result =await Category.findByIdAndDelete(id);
     res.status(200).send(result);
   } catch (error) {
     res.status(500).send({ message: error });

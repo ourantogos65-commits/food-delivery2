@@ -31,7 +31,7 @@
 "use client";
 
 import { FoodType } from "@/lib/types";
-import { FoodCardDetail } from "./FoodDetail";
+
 import { AddCart } from "../cart/AddCart";
 
 type Props = {
@@ -48,7 +48,7 @@ export const FoodCard = ({ food }: Props) => {
 
       <div className="w-[365.33px]  flex flex-col gap-2 ">
         <div className="flex justify-between text-3xl w-[365.33px] ">
-          <h1 className=" text-red-300">{food.foodName}</h1>
+          <h1 className=" text-red-300">{food.name}</h1>
         </div>
         <p className="text-sm">sfvs</p>
       </div>
