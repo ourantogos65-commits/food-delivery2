@@ -34,18 +34,6 @@ const SignUpPage = () => {
     setErrors(errors);
     return Object.keys(errors).length === 0;
   };
-
-  useEffect(() => {
-    const localStorageCount = localStorage.getItem("currentindex");
-    if (localStorageCount) {
-      setCurrentIndex(Number(localStorageCount));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("currentindex", currentIndex);
-  }, [currentIndex]);
-
   const onClickButton = (event) => {
     event.preventDefault();
     const data = new FormData(event.target);

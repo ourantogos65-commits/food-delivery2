@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+import { Input } from "../ui/input";
+
+
 export const Navbar = () => {
   return (
     <div className="px-[88px] py-[3px] flex  justify-between w-full bg-black">
@@ -13,9 +16,19 @@ export const Navbar = () => {
         </div>
       </div>
       <div className="flex gap-4 ">
-        <Link href="/admin">
+    <div className="bg-white w-[251px] h-[36px] rounded-2xl  p-1 flex" >
+   
+      <p>Add Location</p>
+    </div>
+    <div   className="w-[188px] h-[104px] rounded-2xl font-extrabold bg-white text-center pt-2">
+      <h1>Test@gamil.com</h1>
+      
+    </div>
+      
+ 
+        {/* <Link href="/admin">
           <img src="/admin.jpg " className="rounded-full w-10 h-10" alt="" />
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

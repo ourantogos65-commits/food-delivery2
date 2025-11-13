@@ -2,7 +2,7 @@ import { model, Schema, SchemaType } from "mongoose";
 
 const FoodSchemas = new Schema(
   {
-    foodname: { type: String },
+    name: { type: String },
     price: { type: Number },
     image: { type: String },
     ingredients: { type: String },

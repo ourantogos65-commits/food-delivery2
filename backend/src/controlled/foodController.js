@@ -6,10 +6,13 @@ export const getFood = async (req, res) => {
   res.status(200).send(result);
 };
 export const getFoodById = async (req, res) => {
-  const {id}=req.params
-  const result = await Food.findById(id);
-  console.log(result);
-  res.status(200).send(result);
+  const { id } = req.params;
+  try {
+    const result = await Food.findById(id).populate("category");
+    res.status(200).send(result);
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
 };
 export const createfood = async (req, res) => {
   const { body } = req;
@@ -21,7 +24,7 @@ export const createfood = async (req, res) => {
   }
 };
 export const updateFood = async (req, res) => {
-  const { id } = await req.params;
+  const { id } = req.params;
   const { body } = req;
 
   try {

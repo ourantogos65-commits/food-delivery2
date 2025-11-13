@@ -26,6 +26,20 @@ export const AddDish = ({ prodAddHandler }: { prodAddHandler: any }) => {
     setPrice(Number(e.target.value));
   };
 
+  function addDish() {
+    console.log({ name, price });
+
+    fetch("http://localhost:4000/foods", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, price }),
+    });
+
+    
+  }
+
   return (
     <div className="relative ">
       <AlertDialog>
@@ -33,7 +47,6 @@ export const AddDish = ({ prodAddHandler }: { prodAddHandler: any }) => {
           <button className="rounded-full w-10 h-10 text-4xl  font-extralight text-background justify-center items-center  bg-[#EF4444] ">
             +
           </button>
-          
         </AlertDialogTrigger>
         <AlertDialogContent className="w-[460px] h-[592px]">
           <AlertDialogHeader>
@@ -79,10 +92,7 @@ export const AddDish = ({ prodAddHandler }: { prodAddHandler: any }) => {
                 </blockquote>
               </p>
               <div className="w-full h-20 flex justify-end  ">
-                <AlertDialogAction
-                  className="w-[93px] "
-                  onClick={() => prodAddHandler(name, price)}
-                >
+                <AlertDialogAction className="w-[93px] " onClick={addDish}>
                   Add Dish
                 </AlertDialogAction>
               </div>
