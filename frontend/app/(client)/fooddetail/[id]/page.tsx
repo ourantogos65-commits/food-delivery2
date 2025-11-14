@@ -1,5 +1,6 @@
 import { FoodCardList } from "@/components/food/FoodCardList";
-import { getCategoryById } from "@/lib/getApi/getCategoryById";
+import { getCategoryById } from "@/lib/getApi/categories";
+
 
 
 export const FoodCardDetail = async ({params}:{params:{id:string}}) => {
@@ -7,7 +8,7 @@ export const FoodCardDetail = async ({params}:{params:{id:string}}) => {
 
   return (
     <div>
-      <FoodCardList foods={CategoryById} />
+      <FoodCardList name="sdhl" foods={CategoryById} />
     </div>
   );
 };

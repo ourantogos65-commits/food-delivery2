@@ -1,7 +1,7 @@
 
 import { axiosInstance } from "../utils";
 
-export const getFoodOrder = async () => {
+export const getOrder = async () => {
   try {
     const response = await axiosInstance.get("/foodOrder");
     return response.data;
