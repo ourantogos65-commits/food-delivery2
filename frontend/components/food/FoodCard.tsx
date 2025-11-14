@@ -43,12 +43,13 @@ export const FoodCard = ({ food }: Props) => {
     <div className="w-[397.33px] h-[342px] bg-white  rounded-lg  justify-center items-center flex flex-col gap-3 border">
       <div className="w-[365.33px] border rounded-2xl h-[210px]">
         <button className="rounded-full w-11 h-11 text-4xl items-center mt-38 ml-76 absolute "></button>
-        <AddCart />
+        <AddCart food={food} />
       </div>
 
       <div className="w-[365.33px]  flex flex-col gap-2 ">
         <div className="flex justify-between text-3xl w-[365.33px] ">
-          <h1 className=" text-red-300">{food.name}</h1>
+          <h1 className=" text-red-300 font-extrabold ">{food.name} </h1>
+          <p >{food.price}</p>
         </div>
         <p className="text-sm">sfvs</p>
       </div>
