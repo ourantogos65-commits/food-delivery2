@@ -10,10 +10,11 @@ export const FoodCart = () => {
   useEffect(() => {
     const fetchFoods = async () => {
       const data = await getFoods();
-     setFoods(data[0])
+   const foods=data.data
     };
     fetchFoods();
   }, []);
+ 
 
   if (!foods) return <p>Loading...</p>;
 

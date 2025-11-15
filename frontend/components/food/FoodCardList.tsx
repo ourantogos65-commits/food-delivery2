@@ -10,17 +10,22 @@ type Props = {
 export const FoodCardList = ({ name, foods }: Props) => {
   return (
     <div className="flex p-10 flex-col gap-5  w-[1364px] ">
-    
-        <Link href="/fooddetail" className="text-3xl font-semibold text-background capitalize">
+      <h2 className="text-3xl font-semibold text-background capitalize">
         {name}
-        </Link>
-    
+      </h2>
 
-      <div className=" grid grid-cols-3 gap-5 ">
-        {foods?.map((food, index) => (
-          <FoodCard key={index} food={food} />
+      <div  className=" grid grid-cols-3 gap-5 ">
+        
+         {foods?.map((food) => (
+<Link href={}>
+<FoodCard  food={food} />
+</Link>
+          
         ))}
+      
+       
       </div>
     </div>
   );
 };
+

@@ -33,12 +33,13 @@ export const AddCart = ({ food }: AddCartProps) => {
       }),
     });
 
-    console.log("Added to cart:", { count, totalPrice });
+ 
   }
 
   return (
     <div className="relative">
       <AlertDialog>
+        
         <AlertDialogTrigger asChild>
           <Button className="rounded-full w-11 h-11 text-4xl mt-38 ml-7 absolute">
             +
@@ -73,7 +74,7 @@ export const AddCart = ({ food }: AddCartProps) => {
                     <div className="flex gap-3 items-center">
                       <button
                         onClick={() =>
-                          setCount((prev) => (prev > 1 ? prev - 1 : 1))
+                          setCount((p) => (p > 1 ? p - 1 : 1))
                         }
                         className="w-8 border h-8 rounded-full text-center"
                       >

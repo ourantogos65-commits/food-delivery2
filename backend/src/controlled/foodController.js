@@ -8,7 +8,7 @@ export const getFood = async (req, res) => {
 export const getFoodById = async (req, res) => {
   const { id } = req.params;
   try {
-    const result = await Food.findById(id).populate("category");
+    const result =  Food.findById(id).populate("category");
     res.status(200).send(result);
   } catch (error) {
     res.status(500).send({ message: error.message });
