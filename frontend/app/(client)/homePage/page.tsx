@@ -11,13 +11,18 @@ const Userhomepage = async () => {
   const categories = await getCategories();
 
   return (
-    <div className="flex w-[full] flex-col gap-5 items-center justify-center px-5 bg-neutral-700 ">
+    <div className="flex w-full flex-col gap-5 items-center justify-center px-5 bg-neutral-700 ">
       <div>
         <Navbar />
         <Container />
 
-        {categories.splice(0, 1).map((category:any) => (
-          <FoodCardList key={category._id} foods={foods} name={category.name} />
+        {categories.slice(0, 1).map((category: any) => (
+          <FoodCardList
+          
+            key={category._id}
+            foods={foods.filter((food) => food.categoryId === category._id)}
+            name={category.name}
+          />
         ))}
 
         {/* <FoodCardList foods={foods} />

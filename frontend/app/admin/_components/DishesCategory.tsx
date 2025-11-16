@@ -1,29 +1,37 @@
+import { getCategories } from "@/lib/getApi/categories";
 import { AddDish } from "./AddDish";
-
-
+import { useEffect, useState } from "react";
 
 export const DishesCategory = () => {
-  const dishes = [{ title: "gdshvj" }, { title: "ghk" }, { title: "ghk" }];
+  const [dishes, setDishes] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  useEffect(() => {
+    async function fetchCategories() {
+      const data = await getCategories();
+      setDishes(data);
+    }
+    fetchCategories();
+  }, []);
   return (
     <div className="w-full flex flex-col gap-5 bg-white h-[176px] rounded-2xl p-5">
       <h1 className="font-bold text-2xl">Dishes category</h1>
       <div className="flex flex-wrap gap-3">
-        {dishes.map((items, index) => {
-          return (
-            <div key={index}>
-              <div className="border rounded-2xl py-1 px-5 flex gap-3">
-                {items.title}{" "}
-                <span className="bg-gray-800 rounded-4xl px-3 text-accent">
-                  {" "}
-                  1
-                </span>
-              </div>
-            </div>
-          );
-        })}
-       
+        {dishes.map((category) => (
+          <button
+            key={category._id}
+            onClick={() => setSelectedCategory(category.name)}
+            className={`border px-4 py-1 rounded-2xl ${
+              selectedCategory === category.name
+                ? "bg-red-500 text-white"
+                : "bg-gray-200"
+            }`}
+          >
+            {category.name}
+          </button>
+        ))}
       </div>
-     
     </div>
   );
 };
+ 

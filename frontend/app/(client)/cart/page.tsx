@@ -1,25 +1,23 @@
-"use client"
+"use client";
+import { FoodCart } from "@/components/cart/Cart";
+import { FoodOrder } from "@/components/cart/Order";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { useState } from "react";
-import { FoodOrder } from "./Order";
-import { FoodCart } from "./Cart";
-import { MdOutlineShoppingCart } from "react-icons/md";
-export const OrderDetail = () => {
-  const children={
-    order:<FoodOrder/>,
-    cart:<FoodCart/>
-}
-  const [child,setChild]=useState(null)
+
+export default function Cart() {
+  const children = {
+    order: <FoodOrder />,
+    cart: <FoodCart />,
+  };
+  const [child, setChild] = useState(null);
   return (
     <div>
       <Popover>
-        <PopoverTrigger>
-          <MdOutlineShoppingCart className="text-gray-200" size={32} />
-        </PopoverTrigger>
+        <PopoverTrigger className="bg-white w-10 h-10 rounded-full "></PopoverTrigger>
         <PopoverContent className="w-[535px]   bg-neutral-700">
           <div className="w-[471px] flex flex-col gap-8 items-center justify-center">
             <div className="bg-white w-full h-[36px] text-center flex rounded-4xl justify-between">
@@ -44,9 +42,7 @@ export const OrderDetail = () => {
       </Popover>
     </div>
   );
-};
-
-
+}
 
 // "use client";
 // import React, { Children, useState } from "react";

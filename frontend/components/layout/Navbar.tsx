@@ -81,14 +81,15 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { OrderDetail } from "../cart/OrderDetail";
+import React from "react";
 
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { OrderDetail } from "../cart/OrderDetail";
 export const Navbar = () => {
-  const [login, setLogin] = useState(false);
+  const [islogin, setIsLogin] = useState(false);
 
   return (
-    <div className="px-20 py-3 flex justify-between items-center bg-black text-white">
-    
+    <nav className="px-20 py-3 flex justify-between items-center bg-black text-white">
       <div className="flex items-center gap-3">
         <img src="/logo.svg" className="w-12 h-12" />
         <div>
@@ -99,13 +100,10 @@ export const Navbar = () => {
         </div>
       </div>
 
-  
       <div className="flex items-center gap-4">
-    
-
-        {!login ? (
+        {!islogin ? (
           <button
-            onClick={() => setLogin(true)}
+            onClick={() => setIsLogin(true)}
             className="bg-red-500 px-4 py-2 rounded-lg"
           >
             Login
@@ -113,12 +111,13 @@ export const Navbar = () => {
         ) : (
           <>
             <OrderDetail />
+
             <Link href="/admin">
               <img src="/admin.jpg" className="w-10 h-10 rounded-full" />
             </Link>
           </>
         )}
       </div>
-    </div>
+    </nav>
   );
 };

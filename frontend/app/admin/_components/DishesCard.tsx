@@ -26,7 +26,7 @@ export const DishesCard = ({
           </h3>
         </div>
         <button
-          onClick={() => handleRemoveProd(dish.id)}
+         
           className="px-4 py-1  bg-red-100 text-red-700 font-semibold rounded-full shadow-sm hover:bg-red-300  transition duration-500"
           title="Remove"
         >
