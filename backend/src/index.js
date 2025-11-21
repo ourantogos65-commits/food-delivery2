@@ -8,7 +8,8 @@ import cors from "cors";
 import { foodRouters } from "./routers/foodRouter.js";
 import { CategoryRouters} from "./routers/CategoryRouter.js";
 import { foodOrderRouters } from "./routers/OrderRouter.js";
-import { userRouters } from "./routers/userRouter.js";
+import {  userRouters } from "./routers/userRouter.js";
+
 
 configDotenv();
 
@@ -25,7 +26,7 @@ app.use(
 app.use("/", userRouters);
 app.use("/foods", foodRouters)
 app.use("/categories",CategoryRouters)
-app.use("/foodorders",foodOrderRouters)
+app.use("/orders",foodOrderRouters)
 app.listen(PORT, () => {
   connectDB();
   console.log(chalk.green(` Server is running at http://localhost:${PORT}`));
